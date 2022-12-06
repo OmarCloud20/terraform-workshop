@@ -166,17 +166,15 @@ resource "aws_instance" "example" {
 terraform fmt
 ```
 
-4. Run `terraform validate` to validate the Terraform configuration file. This command will check for syntax errors in the Terraform configuration file.
-
-```bash
-terraform validate
-```
-
-
-5. Initialize the working directory by running the following command:
+4. Initialize the working directory by running the following command:
 
 ```bash
 terraform init
+```
+5. Run `terraform validate` to validate the Terraform configuration file. This command will check for syntax errors in the Terraform configuration file.
+
+```bash
+terraform validate
 ```
 
 6. Run the following command to see the changes that will be made:
@@ -233,7 +231,7 @@ terraform {
 }
 ```
 
-4. Create a new file named `main.tf` and add the following code:
+4. Create a file named `main.tf` (no need to create a new file if you still have the one from the previous tutorial) and add the following code:
 
 ```hcl
 terraform {
@@ -295,8 +293,10 @@ terraform destroy
 
 During this tutorial, we will provision an EC2 instance using Terraform and use an S3 remote backend. The EC2 is the Apache web server. 
 
+>Note: there is no need to recreate the below backend.tf file. You can use the one from the previous tutorial.
 
-1. Create a new file named `backend.tf` and add the following code:
+
+1. Create a file named `backend.tf` and add the following code:
 
 ```hcl
 terraform {
@@ -311,7 +311,7 @@ terraform {
 }
 ```
 
-2. Create a new file named `main.tf` and add the following code:
+2. Create a file named `main.tf` or replace the one from the previous tutorial with the following code:
 
 ```hcl
 terraform {
@@ -395,7 +395,7 @@ terraform destroy
 
 ### Conclusion
 
-In this tutorial, we learned Terraform basics and how to provision resources in AWS using Terraform. We also learned how to use an S3 remote backend to store the state file and lock file. We also learned how to use DynamoDB to store the state lock file. We also learned how to provision an Apache web server using Terraform.
+In this tutorial, we learned Terraform basics and how to provision resources in AWS using Terraform. We also learned how to use an S3 remote backend to store the state file and lock file. We also learned how to provision an Apache web server on an EC2 instance and how to allow inbound traffic on port 80 using Terraform.
 
 Now, we are ready to move to more complex IaC projects. I wish you the best of luck in your Terraform journey.
 
