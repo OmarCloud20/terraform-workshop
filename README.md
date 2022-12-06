@@ -71,6 +71,14 @@ Terraform stores the state of the infrastructure it manages in a state file. By 
 The state lock file is used to prevent multiple users from modifying the state file at the same time. By default, the state lock file is stored locally in a file named terraform.tfstate.lock.info. This file is also created automatically when you run terraform apply for the first time.
 
 
+#### Terraform Registry
+# help me write about terraform registry
+
+The [Terraform Registry](https://registry.terraform.io/) is a repository of Terraform modules, providers, and plugins. It is a central place to find, share, and reuse Terraform configurations. The Terraform Registry is a service provided by HashiCorp. It is free to use and open source. 
+
+For example, if you want to deploy an EC2 instance, you can use the [aws_instance](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) resource from the [AWS provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs). The AWS provider is a plugin that is used to interact with the many resources supported by AWS. The document for the aws_instance resource contains all the arguments that can be used to configure the resource. The document also contains the attributes that are exported by the resource. The attributes can be used to reference the resource in other resources. For example, the aws_instance resource exports the public_ip attribute, which can be used to reference the public IP address of the EC2 instance in other resources.
+
+
 
 #### Terraform Local Backend vs. Remote Backend
 
