@@ -72,7 +72,6 @@ The state lock file is used to prevent multiple users from modifying the state f
 
 
 #### Terraform Registry
-# help me write about terraform registry
 
 The [Terraform Registry](https://registry.terraform.io/) is a repository of Terraform modules, providers, and plugins. It is a central place to find, share, and reuse Terraform configurations. The Terraform Registry is a service provided by HashiCorp. It is free to use and open source. 
 
